@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  :root {
+    --text: #11293b;
+    --background: #ffffff;
+    --foreground: #e7e9eb;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -10,6 +16,17 @@ const GlobalStyles = createGlobalStyle`
   html, body, #app {
     width: 100%;
     min-height: 100vh;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
   }
 
   body, button, input {
