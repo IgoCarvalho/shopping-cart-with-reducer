@@ -2,6 +2,7 @@ import { Header } from './components/Header/Header';
 import { ShoppingCard } from './components/ShoppingCard/ShoppingCard';
 import { ShoppingContent } from './components/ShoppingContent/ShoppingContent';
 import { ShoppingData } from './types/shopping';
+import { Product } from './pages/Product/Product';
 
 import { GlobalStyles } from './styles/global';
 
@@ -40,11 +41,12 @@ export function App() {
 
       <Header />
 
-      <ShoppingContent>
+      {/* <ShoppingContent>
         {shoppingData.map((item) => (
           <ShoppingCard key={item.id} data={item} />
         ))}
-      </ShoppingContent>
+      </ShoppingContent> */}
+      <Product />
     </>
   );
 }

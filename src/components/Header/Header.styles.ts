@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
+  background-color: var(--background);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 `;
 
 export const Content = styled.div`
+  max-width: 1120px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +100,7 @@ export const HeaderButton = styled.button`
 export const ShoppingCartBadge = styled.span`
   width: 30px;
   height: 30px;
-  background-color: #f67280;
+  background-color: var(--primary);
   color: #ffffff;
   border-radius: 100%;
   display: flex;
