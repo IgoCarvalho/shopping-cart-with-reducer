@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import { darken, opacify } from 'polished';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   width: fit-content;
@@ -10,9 +11,14 @@ export const Container = styled.div`
 type CardImageContainerProps = { color: string };
 
 export const CardImageContainer = styled.div<CardImageContainerProps>`
+  ${({ color }) => css`
+    background-color: ${color};
+    box-shadow: ${opacify(0.25)(darken(0.025)(color))} 0px 30px 60px -12px inset,
+      ${opacify(0.3)(darken(0.3)(color))} 0px 18px 36px -18px inset;
+  `}
+
   width: 260px;
   height: 300px;
-  background-color: ${({ color }) => color};
   border-radius: 28px;
 
   display: flex;
@@ -57,6 +63,7 @@ export const CardColorsTitle = styled.p`
   color: #4e94f6;
   background-color: #cfe2fd;
   font-size: 12px;
+  font-weight: 700;
   padding: 6px 12px;
   border-radius: 20px;
 `;
