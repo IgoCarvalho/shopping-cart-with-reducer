@@ -1,3 +1,4 @@
+import { darken, lighten } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -5,6 +6,9 @@ const GlobalStyles = createGlobalStyle`
     --text: #11293b;
     --background: #ffffff;
     --foreground: #e7e9eb;
+    --primary: #f67280;
+    --primary-dark: ${darken(0.1)('#f67280')};
+    --secondary-light: ${lighten(0.8)('#11293b')};
   }
 
   * {
@@ -13,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #app {
+  html, body, #root {
     width: 100%;
     min-height: 100vh;
   }
