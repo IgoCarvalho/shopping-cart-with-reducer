@@ -1,4 +1,6 @@
 import { Header } from './components/Header/Header';
+import { ShoppingCard } from './components/ShoppingCard/ShoppingCard';
+import { ShoppingContent } from './components/ShoppingContent/ShoppingContent';
 
 import { GlobalStyles } from './styles/global';
 
@@ -9,9 +11,9 @@ export function App() {
 
       <Header />
 
-      <div>
-        <h1>Hello World!</h1>
-      </div>
+      <ShoppingContent>
+        <ShoppingCard />
+      </ShoppingContent>
     </>
   );
 }
