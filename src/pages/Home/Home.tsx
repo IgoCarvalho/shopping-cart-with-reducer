@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { ShoppingCard } from '../../components/ShoppingCard/ShoppingCard';
 import { ShoppingData } from '../../types/shopping';
 
@@ -35,7 +37,9 @@ export function Home() {
   return (
     <Container>
       {shoppingData.map((item) => (
-        <ShoppingCard key={item.id} data={item} />
+        <Link key={item.id} to="/products">
+          <ShoppingCard data={item} />
+        </Link>
       ))}
     </Container>
   );

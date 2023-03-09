@@ -1,6 +1,7 @@
+import { BrowserRouter } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 
-import { Home } from './pages/Home/Home';
+import { AppRoutes } from './routes';
 
 import { GlobalStyles } from './styles/global';
 
@@ -9,9 +10,10 @@ export function App() {
     <>
       <GlobalStyles />
 
-      <Header />
-
-      <Home />
+      <BrowserRouter>
+        <Header />
+        <AppRoutes />
+      </BrowserRouter>
     </>
   );
 }

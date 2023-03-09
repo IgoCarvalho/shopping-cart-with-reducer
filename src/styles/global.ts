@@ -47,6 +47,11 @@ const GlobalStyles = createGlobalStyle`
     display: block;
     max-width: 100%;
   }
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
 `;
 
 export { GlobalStyles };
