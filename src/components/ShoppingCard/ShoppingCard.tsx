@@ -1,3 +1,5 @@
+import { ShoppingData } from '../../types/shopping';
+
 import {
   CardContent,
   CardImageContainer,
@@ -10,27 +12,44 @@ import {
   CardColor,
 } from './ShoppingCard.styles';
 
-export function ShoppingCard() {
+type ShoppingCardProps = {
+  data: ShoppingData;
+};
+
+export function ShoppingCard({ data }: ShoppingCardProps) {
+  function formatPrice(value: number) {
+    const formatter = Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+
+    return formatter.format(value);
+  }
+
   return (
     <Container>
-      <CardImageContainer>
-        <img src="/images/shoes1.png" alt="Nike air" />
+      <CardImageContainer color={data.image.background}>
+        <img src={data.image.src} alt={data.title} />
       </CardImageContainer>
 
       <CardContent>
-        <CardTitle>Nike air</CardTitle>
+        <CardTitle>{data.title}</CardTitle>
 
         <CardPriceContainer>
-          <span className="discount">$180,00</span>
-          <span>$289,00</span>
+          {data.price.discount && (
+            <span className="discount">{formatPrice(data.price.discount)}</span>
+          )}
+
+          <span>{formatPrice(data.price.value)}</span>
         </CardPriceContainer>
 
         <CardColorsContainer>
           <CardColorsTitle>Colors</CardColorsTitle>
 
           <CardColorsList>
-            <CardColor color="#ff2323" />
-            <CardColor color="#1fa3cc" />
+            {data.colors.map((color) => (
+              <CardColor key={color} color={color} />
+            ))}
           </CardColorsList>
         </CardColorsContainer>
       </CardContent>

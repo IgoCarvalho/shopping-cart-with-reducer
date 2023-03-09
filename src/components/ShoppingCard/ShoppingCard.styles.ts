@@ -7,10 +7,12 @@ export const Container = styled.div`
   gap: 38px;
 `;
 
-export const CardImageContainer = styled.div`
+type CardImageContainerProps = { color: string };
+
+export const CardImageContainer = styled.div<CardImageContainerProps>`
   width: 260px;
   height: 300px;
-  background-color: #f7c29b;
+  background-color: ${({ color }) => color};
   border-radius: 28px;
 
   display: flex;
