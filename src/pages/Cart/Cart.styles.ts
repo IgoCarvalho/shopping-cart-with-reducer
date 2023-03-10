@@ -1,7 +1,7 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: calc(100% - 24px);
   max-width: 1120px;
   margin: 0 auto;
@@ -29,6 +29,8 @@ export const CartHeader = styled.header`
     }
   }
 `;
+
+export const CartContent = styled.main``;
 
 export const ProductContainer = styled.div`
   display: flex;
@@ -163,6 +165,52 @@ export const ShoppingCartTable = styled.table`
 
     tbody td:first-child {
       width: 100%;
+    }
+  }
+`;
+
+export const CartFooter = styled.footer`
+  border-top: 1px solid var(--foreground);
+  margin-top: 16px;
+
+  width: calc(100% - 24px);
+  max-width: 1120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  padding: 12px 0;
+
+  p {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    font-size: 20px;
+
+    strong {
+      font-size: 28px;
+    }
+  }
+
+  button {
+    max-width: 250px;
+  }
+
+  @media screen and (max-width: 425px) {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    p {
+      strong {
+        font-size: 24px;
+      }
+    }
+
+    button {
+      width: auto;
     }
   }
 `;
