@@ -19,7 +19,7 @@ export function Header() {
         <LeftContent>
           <HeaderMenu>
             <HeaderMenuIcon />
-            Menu
+            <span>Menu</span>
           </HeaderMenu>
 
           <HeaderInputContainer>

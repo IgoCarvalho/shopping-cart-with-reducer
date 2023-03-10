@@ -1,18 +1,25 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  --horizontal-padding: 24px;
+
   width: 100%;
   background-color: var(--background);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 `;
 
 export const Content = styled.div`
+  width: calc(100% - var(--horizontal-padding));
   max-width: 1120px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+
+  @media screen and (max-width: 425px) {
+    padding: 12px 0;
+  }
 `;
 
 export const LeftContent = styled.div`
@@ -29,6 +36,15 @@ export const HeaderMenu = styled.button`
   font-size: 20px;
   border: none;
   border-radius: 20px;
+
+  @media screen and (max-width: 425px) {
+    span {
+      display: none;
+    }
+
+    padding: 12px;
+    border-radius: 18px;
+  }
 `;
 
 export const HeaderMenuIcon = styled.div`
@@ -72,6 +88,15 @@ export const HeaderInputContainer = styled.div`
     outline: none;
     font-size: 20px;
   }
+
+  @media screen and (max-width: 425px) {
+    input {
+      display: none;
+    }
+
+    padding: 12px;
+    border-radius: 18px;
+  }
 `;
 
 export const RightContent = styled.div`
@@ -94,6 +119,11 @@ export const HeaderButton = styled.button`
 
   &:hover {
     background-color: var(--foreground);
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 8px;
+    border-radius: 14px;
   }
 `;
 
