@@ -62,7 +62,41 @@ export function Cart() {
             <td>
               <RemoveButton>
                 <Trash size={24} />
-                Remove
+                <span>Remove</span>
+              </RemoveButton>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ProductContainer>
+                <ImageContainer>
+                  <img src="/images/shoes1.png" alt="Nike Air" />
+                </ImageContainer>
+
+                <ProductInfo>
+                  <p>Nike Air</p>
+                  <span>$190.00</span>
+                </ProductInfo>
+              </ProductContainer>
+            </td>
+            <td>
+              <QuantityContainer>
+                <QuantityButton>
+                  <Minus weight="bold" />
+                </QuantityButton>
+                <p>10</p>
+                <QuantityButton>
+                  <Plus weight="bold" />
+                </QuantityButton>
+              </QuantityContainer>
+            </td>
+            <td>
+              <strong>$570.00</strong>
+            </td>
+            <td>
+              <RemoveButton>
+                <Trash size={24} />
+                <span>Remove</span>
               </RemoveButton>
             </td>
           </tr>
@@ -96,41 +130,7 @@ export function Cart() {
             <td>
               <RemoveButton>
                 <Trash size={24} />
-                Remove
-              </RemoveButton>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <ProductContainer>
-                <ImageContainer>
-                  <img src="/images/shoes1.png" alt="Nike Air" />
-                </ImageContainer>
-
-                <ProductInfo>
-                  <p>Nike Air</p>
-                  <span>$190.00</span>
-                </ProductInfo>
-              </ProductContainer>
-            </td>
-            <td>
-              <QuantityContainer>
-                <QuantityButton>
-                  <Minus weight="bold" />
-                </QuantityButton>
-                <p>1</p>
-                <QuantityButton>
-                  <Plus weight="bold" />
-                </QuantityButton>
-              </QuantityContainer>
-            </td>
-            <td>
-              <strong>$570.00</strong>
-            </td>
-            <td>
-              <RemoveButton>
-                <Trash size={24} />
-                Remove
+                <span>Remove</span>
               </RemoveButton>
             </td>
           </tr>
