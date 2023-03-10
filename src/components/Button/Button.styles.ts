@@ -39,4 +39,10 @@ export const Container = styled.button<ButtonStylesProps>`
       }
     `;
   }}
+
+  @media screen and (max-width: 425px) {
+    gap: 6px;
+    padding: 12px;
+    font-size: 16px;
+  }
 `;

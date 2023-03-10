@@ -4,10 +4,16 @@ import styled, { css } from 'styled-components';
 export const Container = styled.main`
   display: flex;
   gap: 64px;
-  width: 100%;
+  width: calc(100% - 24px);
   max-width: 1120px;
   margin: 0 auto;
   padding: 64px 0;
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 24px;
+  }
 `;
 
 type ProductImageContainerProps = {
@@ -21,7 +27,18 @@ export const ProductImageContainer = styled.div<ProductImageContainerProps>`
       ${opacify(0.3)(darken(0.3)(color))} 0px 18px 36px -18px inset;
   `}
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 38px;
+
+  @media screen and (max-width: 425px) {
+    border-radius: 16px;
+
+    img {
+      width: 220px;
+    }
+  }
 `;
 
 export const ProductInfoContainer = styled.div`
@@ -39,6 +56,19 @@ export const ProductInfoContainer = styled.div`
 
   & > p {
     font-size: 20px;
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 0;
+    gap: 12px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    & > p {
+      font-size: 16px;
+    }
   }
 `;
 export const ProductPrice = styled.div`
@@ -89,4 +119,13 @@ export const ProductActionButtons = styled.div`
   margin-top: auto;
   display: flex;
   gap: 16px;
+
+  @media screen and (max-width: 425px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    border-top: 1px solid var(--foreground);
+  }
 `;
