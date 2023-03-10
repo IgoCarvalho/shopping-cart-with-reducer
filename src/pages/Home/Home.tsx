@@ -31,6 +31,54 @@ const shoppingData: ShoppingData[] = [
     },
     colors: ['#33658aff', '#86bbd8ff', '#f6ae2dff', '#f26419ff'],
   },
+  {
+    id: '3',
+    title: 'Nike Flex',
+    price: {
+      value: 149,
+    },
+    image: {
+      background: '#7be498',
+      src: '/images/shoes2.png',
+    },
+    colors: ['#33658aff', '#86bbd8ff', '#f6ae2dff', '#f26419ff'],
+  },
+  {
+    id: '4',
+    title: 'Nike Flex',
+    price: {
+      value: 149,
+    },
+    image: {
+      background: '#7be498',
+      src: '/images/shoes2.png',
+    },
+    colors: ['#33658aff', '#86bbd8ff', '#f6ae2dff', '#f26419ff'],
+  },
+  {
+    id: '5',
+    title: 'Nike Flex',
+    price: {
+      value: 149,
+    },
+    image: {
+      background: '#7be498',
+      src: '/images/shoes2.png',
+    },
+    colors: ['#33658aff', '#86bbd8ff', '#f6ae2dff', '#f26419ff'],
+  },
+  {
+    id: '6',
+    title: 'Nike Flex',
+    price: {
+      value: 149,
+    },
+    image: {
+      background: '#7be498',
+      src: '/images/shoes2.png',
+    },
+    colors: ['#33658aff', '#86bbd8ff', '#f6ae2dff', '#f26419ff'],
+  },
 ];
 
 export function Home() {

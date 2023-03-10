@@ -1,4 +1,5 @@
 import { Heart, MagnifyingGlass, ShoppingCart, User } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
 
 import {
   Container,
@@ -35,10 +36,12 @@ export function Header() {
           <HeaderButton>
             <Heart size={24} weight="bold" />
           </HeaderButton>
-          <HeaderButton>
-            <ShoppingCart size={24} weight="bold" />
-            <ShoppingCartBadge>2</ShoppingCartBadge>
-          </HeaderButton>
+          <Link to="/cart">
+            <HeaderButton>
+              <ShoppingCart size={24} weight="bold" />
+              <ShoppingCartBadge>2</ShoppingCartBadge>
+            </HeaderButton>
+          </Link>
         </RightContent>
       </Content>
     </Container>

@@ -7,9 +7,9 @@ import { Product } from './pages/Product/Product';
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/products" element={<Product />} />
-      <Route path="/" element={<Cart />} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
   );
 }
