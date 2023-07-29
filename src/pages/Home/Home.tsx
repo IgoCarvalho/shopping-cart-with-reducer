@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { ShoppingCard } from '../../components/ShoppingCard/ShoppingCard';
 import { ShoppingData } from '../../types/shopping';
@@ -82,10 +82,12 @@ const shoppingData: ShoppingData[] = [
 ];
 
 export function Home() {
+  const location = useLocation();
+
   return (
     <Container>
       {shoppingData.map((item) => (
-        <Link key={item.id} to="/products">
+        <Link key={item.id} to="/products" state={{ backgroundLocation: location }}>
           <ShoppingCard data={item} />
         </Link>
       ))}

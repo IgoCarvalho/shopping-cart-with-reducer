@@ -18,10 +18,12 @@ export function Header() {
     <Container>
       <Content>
         <LeftContent>
-          <HeaderMenu>
-            <HeaderMenuIcon />
-            <span>Menu</span>
-          </HeaderMenu>
+          <Link to="/">
+            <HeaderMenu>
+              <HeaderMenuIcon />
+              <span>Menu</span>
+            </HeaderMenu>
+          </Link>
 
           <HeaderInputContainer>
             <MagnifyingGlass size={24} color="var(--text)" />
